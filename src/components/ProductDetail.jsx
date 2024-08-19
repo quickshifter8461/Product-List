@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { productLoader } from "./Loader";
+import { Link } from "react-router-dom";
 
 function ProductDetail() {
   const { productId } = useParams();
@@ -23,6 +24,7 @@ function ProductDetail() {
           <p className="card-text">{product.body}</p>
         </div>
       </div>
+       <Link className="btn btn-primary mt-4" to={'/'}>Back to Product List</Link> 
     </div>
   );
 }
